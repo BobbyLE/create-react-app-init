@@ -42,5 +42,5 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ### `More`
 - [x] Eslint
 - [x] Husky
-- [ ] Jest + Enzyme
-- [ ] Scss
+- [x] Jest + React-test-renderer
+- [x] SCSS + normalize.css
