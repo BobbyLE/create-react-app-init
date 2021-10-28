@@ -44,3 +44,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - [x] Husky
 - [x] Jest + React-test-renderer
 - [x] SCSS + normalize.css
+- [x] Router + History
