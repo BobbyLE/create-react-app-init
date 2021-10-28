@@ -16,6 +16,7 @@ module.exports = {
     'plugin:jest/recommended',
     'plugin:testing-library/react',
     'plugin:import/recommended',
+    'plugin:import/react',
   ],
   parser: 'babel-eslint', // Uses babel-eslint transforms.
   parserOptions: {
@@ -83,5 +84,8 @@ module.exports = {
       },
     ],
   },
-  settings: { react: { version: 'detect' }},
+  settings: { 
+    react: { version: 'detect' },
+    'import/resolver': {node: {extensions: ['.js','.jsx']}},
+  },
 }
