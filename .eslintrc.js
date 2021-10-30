@@ -20,7 +20,7 @@ module.exports = {
   ],
   parser: 'babel-eslint', // Uses babel-eslint transforms.
   parserOptions: {
-    ecmaFeatures: {jsx: true},
+    ecmaFeatures: { jsx: true },
     ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
     sourceType: 'module', // Allows for the use of imports
   },
@@ -37,10 +37,11 @@ module.exports = {
         ignoreStrings: true,
       },
     ],
-    indent: ['error', 2],
+    indent: ['error', 2, { 'SwitchCase': 1 }],
     quotes: ['warn', 'single'], 
     semi: ['warn', 'never'],
     'comma-dangle': ['warn', 'always-multiline' ],
+    'comma-spacing': ['warn', { 'before': false, 'after': true }],
     'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 1 }],
     'no-param-reassign': 'off',
     'import/prefer-default-export': 'off',
@@ -52,6 +53,13 @@ module.exports = {
     'arrow-parens': ['warn', 'as-needed'],
     'no-underscore-dangle': 'off',
     'spaced-comment': 'warn',
+    'eol-last': ['warn', 'always'],
+    'key-spacing': ['error', { 
+      'beforeColon': false,
+      'afterColon': true, 
+    }],
+    'object-curly-spacing': ['warn', 'always', { objectsInObjects: false }],
+    'space-before-blocks': ['warn', 'always'],
     'prefer-destructuring': [
       'warn',
       {
@@ -83,9 +91,10 @@ module.exports = {
         ],
       },
     ],
+    'arrow-body-style': ['warn', 'as-needed'],
   },
   settings: { 
     react: { version: 'detect' },
-    'import/resolver': {node: {extensions: ['.js','.jsx']}},
+    'import/resolver': { node: { extensions: ['.js', '.jsx'] }},
   },
 }

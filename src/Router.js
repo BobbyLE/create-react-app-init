@@ -8,18 +8,16 @@ import {
 
 const history = createBrowserHistory()
 
-const AppRouter = () => {
-  return (
-    <>
-      <Router history={history}>
-        <Switch>
-          <Route exact path='/'>
-            { () => 'Home'}
-          </Route>
-        </Switch>
-      </Router>
-    </>
-  )
-}
+const AppRouter = () => (
+  <>
+    <Router history={history}>
+      <Switch>
+        <Route exact path='/'>
+          { () => 'Home'}
+        </Route>
+      </Switch>
+    </Router>
+  </>
+)
 
 export default AppRouter
