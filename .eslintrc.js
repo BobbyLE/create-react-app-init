@@ -7,16 +7,15 @@ module.exports = {
     node: true,
   },
   extends: [
-    'react-app',
-    'react-app/jest', 
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:jsx-a11y/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:jest/recommended',
-    'plugin:testing-library/react',
-    'plugin:import/recommended',
-    'plugin:import/react',
+    'react-app', // eslint-config-react-app
+    'react-app/jest', // yeslint-config-react-app
+    'eslint:recommended', // eslint-plugin-react
+    'plugin:react/recommended', // eslint-plugin-react
+    'plugin:jsx-a11y/recommended', // eslint-plugin-jsx-a11y
+    'plugin:react-hooks/recommended', // eslint-plugin-react-hooks
+    'plugin:jest/recommended', // eslint-plugin-jest
+    'plugin:testing-library/react', // eslint-plugin-testing-library
+    'plugin:import/recommended', // eslint-plugin-import
   ],
   parser: 'babel-eslint', // Uses babel-eslint transforms.
   parserOptions: {
