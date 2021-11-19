@@ -8,7 +8,7 @@ import {
 
 const history = createBrowserHistory()
 
-const AppRouter = () => (
+const AppRouter: React.FC = () => (
   <>
     <Router history={history}>
       <Switch>
