@@ -8,7 +8,7 @@ module.exports = {
   },
   extends: [
     'react-app', // eslint-config-react-app
-    'react-app/jest', // yeslint-config-react-app
+    // 'react-app/jest', // yeslint-config-react-app
     'eslint:recommended', // eslint-plugin-react
     'plugin:react/recommended', // eslint-plugin-react
     'plugin:jsx-a11y/recommended', // eslint-plugin-jsx-a11y
@@ -16,8 +16,8 @@ module.exports = {
     'plugin:jest/recommended', // eslint-plugin-jest
     'plugin:testing-library/react', // eslint-plugin-testing-library
     'plugin:import/recommended', // eslint-plugin-import
-    'plugin:@typescript-eslint/recommended', // @typescript-eslint/eslint-plugin
     'plugin:import/typescript', // @typescript-eslint/parser 
+    'plugin:@typescript-eslint/recommended', // @typescript-eslint/eslint-plugin
   ],
   parser: '@typescript-eslint/parser', // @typescript-eslint/parser
   parserOptions: {
@@ -49,7 +49,6 @@ module.exports = {
     'no-console': 'warn',
     'no-debugger': 'warn',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-    'no-unused-vars': 'warn',
     'operator-linebreak': ['warn', 'before'],
     'arrow-parens': ['warn', 'as-needed'],
     'no-underscore-dangle': 'off',
@@ -94,8 +93,11 @@ module.exports = {
     ],
     'arrow-body-style': ['warn', 'as-needed'],
     'arrow-spacing': ['warn', { before: true, after: true }],
+    'keyword-spacing': ['warn', { before: true, after: true }],
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
+    'no-use-before-define': 'off', // Fix: 'React was 
+    '@typescript-eslint/no-use-before-define': ['error'], // used before it was defined'
   },
   settings: { 
     react: { version: 'detect' },
