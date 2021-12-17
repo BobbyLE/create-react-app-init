@@ -2013,16 +2013,47 @@ describe('day 1', () => {
   //   260,
   //   263,
   // ]
-  test('list increase', () => {
-    let countIncrease2 = 0
+  
+  // test('list increase - part 1', () => {
+  //   let countIncrease2 = 0
+  //   list.forEach((val, i) => {
+  //     if (i > 0 && i < list.length) {
+  //       if (list[i] > list[i-1]) {
+  //         countIncrease2 ++
+  //       }
+  //     }
+  //   })
+
+  //   expect(countIncrease2).toEqual(1557)
+  // })
+
+  test('sum increase - Part 2', () => {
+    let count = 0
+
+    // const list = [
+    //   199, // 0
+    //   200, // 1
+    //   208, // 2
+    //   210, // 3
+    //   200, // 4
+    //   207, // 5
+    //   240, // 
+    //   269, // 7
+    //   260, // 8
+    //   263, // 9
+    // ]
+    
     list.forEach((val, i) => {
-      if (i > 0 && i < list.length) {
-        if (list[i] > list[i-1]) {
-          countIncrease2 ++
+      if (i < list.length - 3) {
+        const A = list[i] + list[i+1] + list[i+2]
+        const B = list[i+1] + list[i+2] + list[i+3]
+
+        if (A < B) {
+          count++
         }
       }
     })
 
-    expect(countIncrease2).toEqual(1557)
+    expect(count).toEqual(5)
   })
 })
