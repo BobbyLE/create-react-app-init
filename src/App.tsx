@@ -1,5 +1,4 @@
 import AppRouter from './Router'
-import './App.scss'
 
 const App: React.FC = () => (
   <div>
